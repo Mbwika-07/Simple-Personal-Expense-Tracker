@@ -1,7 +1,17 @@
+from datetime import datetime, timedelta
+
 expenses = {
-    "food": [],
-    "transport": [],
-    "entertainment": [],
+    "food": [
+        {"name": "Pizza", "amount": 800, "date": "12/06/24"},
+        {"name": "Burger", "amount": 500, "date": "13/06/24"},
+        {"name": "Salad", "amount": 300, "date": "14/06/24"}
+    ],
+    "transport": [
+        {"name": "Bus fare", "amount": 100, "date": "12/06/24"}
+    ],
+    "entertainment": [
+        {"name": "Movie", "amount": 1200, "date": "11/06/24"}
+    ],
     "clothes": [],
     "others": []  
 }
@@ -22,15 +32,37 @@ def add_expense():
         "date": date
     }
     expenses[category].append(expense)
-    print(f"Expense added: {expense}")
     
+    #print(f"\nExpense added: {expense}")
+    print(f"\nYou added the item {name} of amount {amount} on date {date} to the category {category}.")
     
 
 def view_total_summary():
-    print("function coming soon!!!")
+    grand_total = 0
+    print("\nTotal expenses by category:")
+    
+    for category, expense_list in expenses.items():
+        category_total = sum(expense["amount"] for expense in expense_list)
+        print(f"\t{category.capitalize()}: Ksh.{category_total}")
+        
+        grand_total += category_total
+    
+    print(f"\n\t\tGrand Total: Ksh.{grand_total}")
 
 def view_specific_summary():
-    print("function coming soon!!!")
+    category = input("Enter the category you want to view: ")
+    
+    if category in expenses:
+        if expenses[category]:  # Check if there are any expenses in the category
+            category_total = 0
+            for expense in expenses[category]:
+                print(f"\nName: {expense['name']}, Amount: Ksh.{expense['amount']}, Date: {expense['date']}")
+                category_total += expense['amount']
+            print(f"\n\t\tGrand total for the category {category.title()} is Ksh. {category_total} ")
+        else:
+            print(f"No expenses in the '{category}' category.")
+    else:
+        print(f"Category '{category}' does not exist.")
 
 def view_total_time():
     print("function coming soon!!!")
