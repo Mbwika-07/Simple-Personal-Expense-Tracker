@@ -121,6 +121,8 @@ def view_total_time():
     print("4. Custom date range")
     key = input("What time frame would you like to view (1-4): ")
     
+    
+    
     if key == "1":
         filtered_expenses = get_expenses_for_day()
     elif key == "2":
