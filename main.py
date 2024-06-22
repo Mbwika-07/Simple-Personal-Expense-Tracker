@@ -113,8 +113,6 @@ def get_expenses_for_custom_range():
                 
     return range_expenses
 
-
-
 def view_total_time():
     print("Time frames to choose from")
     print("1. Specific date")
@@ -143,7 +141,11 @@ def view_total_time():
     else:
         print("No expenses found for the specified time frame.")
 
+
+
 is_running = True
+
+
 
 while is_running:
     print("\n*********************************************************************************************************************************\n")
