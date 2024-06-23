@@ -68,6 +68,8 @@ def get_expenses_for_day():
                 
     return day_expenses
 
+
+
 def get_expenses_for_month():
     month_expenses = []
     month = int(input("Enter month (mm): "))
@@ -80,6 +82,8 @@ def get_expenses_for_month():
                 month_expenses.append(expense)
                 
     return month_expenses
+
+
 
 def get_expenses_for_week():
     week_expenses = []
