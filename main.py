@@ -83,6 +83,9 @@ def get_expenses_for_month():
 
 
 
+
+
+
 def get_expenses_for_week():
     week_expenses = []
     day = int(input("Enter start day of the week (dd): "))
