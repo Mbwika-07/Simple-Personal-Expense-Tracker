@@ -31,6 +31,8 @@ def add_expense():
     
     print(f"\nYou added the item {name} of amount {amount} on date {date} to the category {category}.")
 
+
+
 def view_total_summary():
     grand_total = 0
     print("\nTotal expenses by category:")
@@ -41,6 +43,9 @@ def view_total_summary():
         grand_total += category_total
     
     print(f"\n\t\tGrand Total: Ksh.{grand_total}")
+
+
+
 
 def view_specific_summary():
     category = input("Enter the category you want to view: ")
@@ -57,6 +62,9 @@ def view_specific_summary():
     else:
         print(f"Category '{category}' does not exist.")
 
+
+
+
 def get_expenses_for_day():
     day_expenses = []
     target_date = input("Enter the specific date you would like to search (dd/mm/yy): ")
@@ -67,6 +75,11 @@ def get_expenses_for_day():
                 day_expenses.append(expense)
                 
     return day_expenses
+
+
+
+
+
 
 
 
@@ -83,6 +96,9 @@ def get_expenses_for_month():
                 month_expenses.append(expense)
                 
     return month_expenses
+
+
+
 
 
 
