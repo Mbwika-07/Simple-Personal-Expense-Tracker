@@ -43,8 +43,11 @@ def view_total_summary():
     print(f"\n\t\tGrand Total: Ksh.{grand_total}")
 
 
+
+
+
 def view_specific_summary():
-    category = input("Enter the category you want to view: ")
+    category = input("Enter the category you want to view:  ")
     
     if category in expenses:
         if expenses[category]:
@@ -57,6 +60,8 @@ def view_specific_summary():
             print(f"No expenses in the '{category}' category.")
     else:
         print(f"Category '{category}' does not exist.")
+
+
 
 def get_expenses_for_day():
     day_expenses = []
