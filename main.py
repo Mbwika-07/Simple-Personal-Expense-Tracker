@@ -31,8 +31,6 @@ def add_expense():
     
     print(f"\nYou added the item {name} of amount {amount} on date {date} to the category {category}.")
 
-
-
 def view_total_summary():
     grand_total = 0
     print("\nTotal expenses by category:")
@@ -43,8 +41,6 @@ def view_total_summary():
         grand_total += category_total
     
     print(f"\n\t\tGrand Total: Ksh.{grand_total}")
-
-
 
 
 def view_specific_summary():
@@ -61,9 +57,6 @@ def view_specific_summary():
             print(f"No expenses in the '{category}' category.")
     else:
         print(f"Category '{category}' does not exist.")
-
-
-
 
 def get_expenses_for_day():
     day_expenses = []
