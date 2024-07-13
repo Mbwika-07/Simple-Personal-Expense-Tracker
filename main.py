@@ -44,8 +44,6 @@ def view_total_summary():
 
 
 
-
-
 def view_specific_summary():
     category = input("Enter the category you want to view:  ")
     
