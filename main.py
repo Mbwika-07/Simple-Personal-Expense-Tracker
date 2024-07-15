@@ -43,9 +43,6 @@ def view_total_summary():
     print(f"\n\t\tGrand Total: Ksh.{grand_total}")
 
 
-
-
-
 def view_specific_summary():
     category = input("Enter the category you want to view:  ")
     
