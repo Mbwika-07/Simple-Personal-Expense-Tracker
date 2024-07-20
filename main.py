@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta
 
-
-
 expenses = {
     "food": [
         {"name": "Pizza", "amount": 800, "date": "12/06/24"},
@@ -17,8 +15,6 @@ expenses = {
     "clothes": [],
     "others": []  
 }
-
-
 
 
 def add_expense():
